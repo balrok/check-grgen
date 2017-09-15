@@ -17,6 +17,16 @@ Add the following entry to `.pre-commit-config.yaml`:
   - id: check-grgen
 ```
 
+Alternatively, since the checks take quite a while, you can install this hook only for push
+```yaml
+- repo: git://github.com/balrok/check-grgen
+  sha: master
+  hooks:
+  - id: check-grgen
+    stages: [push]
+```
+and `pre-commit install -t pre-push`
+
 Options:
 
 * `-x PATTERN, --exclude PATTERN` filename patterns to exclude from validation.
