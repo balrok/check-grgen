@@ -1,0 +1,6 @@
+- id: check-grgen
+  name: check-grgen
+  entry: check-grgen
+  description: Hook to validate grgen files.
+  language: python
+  files: .*\.(grs|grg|gm)
