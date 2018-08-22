@@ -25,6 +25,7 @@ def main():
         status, pr = grg_check(filename)
         global_status |= status
         if status > 0:
+            print("Error in: %s" % filename)
             print("\n".join(pr))
             return status
     return global_status
